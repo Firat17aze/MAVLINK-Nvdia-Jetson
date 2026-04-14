@@ -1,0 +1,44 @@
+mission:
+  mode: obstacle_tracking_v1
+  geofence:
+    max_radius_m: 300.0
+    min_alt_m: 8.0
+    max_alt_m: 120.0
+  speed:
+    max_xy_mps: 8.0
+    max_z_mps: 2.5
+  target_tracking:
+    desired_follow_distance_m: 20.0
+    lost_timeout_s: 3.0
+
+safety:
+  confidence:
+    min_detection: 0.72
+    min_tracking: 0.70
+  command_timeout_s: 0.50
+  health_timeout_s: 1.00
+  max_obstacle_closure_rate_mps: 4.0
+  emergency_brake_distance_m: 8.0
+
+failsafe:
+  ai_timeout_action: HOLD
+  companion_loss_action: PX4_FAILSAFE
+  low_battery_action: RTL
+  nav_fault_action: LOITER
+  lte_fallback_enabled: true
+
+comms:
+  mavlink:
+    system_id: 42
+    component_id: 191
+    target_system_id: 1
+    target_component_id: 1
+    offboard_rate_hz: 20
+  telemetry:
+    primary: RF
+    secondary: LTE
+
+health:
+  max_cpu_pct: 88.0
+  max_inference_latency_ms: 140.0
+  max_link_rtt_ms: 180.0

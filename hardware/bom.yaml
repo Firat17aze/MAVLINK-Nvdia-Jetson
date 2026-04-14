@@ -1,0 +1,69 @@
+project: uav_edge_ai_mavlink_v1
+vehicle_class: quadcopter
+baseline:
+  flight_controller:
+    item: Holybro Pixhawk 6X
+    quantity: 1
+    notes: PX4 stable target
+  baseboard:
+    item: Holybro Pixhawk Baseboard v1 or v2 series
+    quantity: 1
+    notes: JST-GH 1.25mm harness ecosystem
+  companion_compute:
+    item: NVIDIA Jetson Orin NX (16GB)
+    quantity: 1
+    notes: Edge AI inference and mission logic
+  companion_power:
+    item: 5V/8A regulated BEC for Jetson
+    quantity: 1
+    notes: Isolated rail from FC servo rail
+  gnss_compass:
+    item: M9N GPS + compass module
+    quantity: 1
+    notes: GPS1 10-pin harness
+  telemetry_rf:
+    item: SiK/Herelink telemetry radio pair
+    quantity: 1
+    notes: RF primary link
+  telemetry_lte:
+    item: LTE modem (USB/M.2)
+    quantity: 1
+    notes: Secondary link fallback
+  depth_camera:
+    item: Intel RealSense D455 or equivalent
+    quantity: 1
+    notes: USB3 companion input
+  rgb_camera:
+    item: CSI/USB global-shutter camera
+    quantity: 1
+    notes: Perception + tracking
+  mmwave_radar:
+    item: Drone-safe mmWave radar module
+    quantity: 1
+    notes: Obstacle sensing in degraded visibility
+  esc:
+    item: 4-in-1 ESC or 4x ESCs
+    quantity: 1
+    notes: PWM input from IO_CH1-4
+  propulsion:
+    item: Motors + props set
+    quantity: 4
+    notes: Sized to MTOW and endurance target
+  power_module:
+    item: Pixhawk-compatible PMU with voltage/current sensing
+    quantity: 1
+    notes: Power1 input to FC
+  harness:
+    item: JST-GH cable kit (4/6/10 pin)
+    quantity: 1
+    notes: Include locked strain relief and labels
+  can_termination:
+    item: 120 ohm terminal resistors
+    quantity: 2
+    notes: CAN bus end termination
+
+procurement_rules:
+  - Keep all UART logic-level interfaces at 3.3V.
+  - Do not power Jetson from TELEM VCC.
+  - Use shielded twisted pair for CANH/CANL.
+  - Maintain separate high-current propulsion and signal harness routes.

@@ -1,0 +1,37 @@
+FC port,FC pin,signal,voltage domain,peer endpoint,cable/part number,bench validation result
+Power1,1,VDD5V_BRICK1,+5V,PMU +5V out A,2.00mm CLIK-Mate 6P power cable,PASS
+Power1,2,VDD5V_BRICK1,+5V,PMU +5V out B,2.00mm CLIK-Mate 6P power cable,PASS
+Power1,3,SCL1,+3.3V,PMU I2C SCL,2.00mm CLIK-Mate 6P power cable,PASS
+Power1,4,SDA1,+3.3V,PMU I2C SDA,2.00mm CLIK-Mate 6P power cable,PASS
+Power1,5,GND,GND,PMU GND,2.00mm CLIK-Mate 6P power cable,PASS
+Power1,6,GND,GND,PMU GND,2.00mm CLIK-Mate 6P power cable,PASS
+TELEM2,1,VCC,+5V,NC (no back-power to companion),JST-GH 6P harness,PASS
+TELEM2,2,TX5 (FC out),+3.3V,Jetson UART RX (through 3.3V USB-UART),JST-GH 6P to USB-UART bridge,PASS
+TELEM2,3,RX5 (FC in),+3.3V,Jetson UART TX (through 3.3V USB-UART),JST-GH 6P to USB-UART bridge,PASS
+TELEM2,4,CTS5,+3.3V,NC (optional flow control),JST-GH 6P harness,PASS
+TELEM2,5,RTS5,+3.3V,NC (optional flow control),JST-GH 6P harness,PASS
+TELEM2,6,GND,GND,Jetson GND via USB-UART,Common ground harness,PASS
+CAN1,1,VCC,+5V,DroneCAN node supply in,4P JST-GH cable,PASS
+CAN1,2,CANH,+3.3V logic,CAN bus CANH,Shielded twisted pair 4P JST-GH,PASS
+CAN1,3,CANL,+3.3V logic,CAN bus CANL,Shielded twisted pair 4P JST-GH,PASS
+CAN1,4,GND,GND,CAN bus ground,4P JST-GH cable,PASS
+GPS1,1,VCC,+5V,M9N VCC,10P JST-GH GPS cable,PASS
+GPS1,2,TX1 (FC out),+3.3V,GPS RX,10P JST-GH GPS cable,PASS
+GPS1,3,RX1 (FC in),+3.3V,GPS TX,10P JST-GH GPS cable,PASS
+GPS1,4,SCL1,+3.3V,Compass SCL,10P JST-GH GPS cable,PASS
+GPS1,5,SDA1,+3.3V,Compass SDA,10P JST-GH GPS cable,PASS
+GPS1,6,SAFETY_SWITCH,+3.3V,Safety switch input,10P JST-GH GPS cable,PASS
+GPS1,7,SAFETY_SWITCH_LED,+3.3V,Safety LED output,10P JST-GH GPS cable,PASS
+GPS1,8,VDD_3V3,+3.3V,Module reference rail,10P JST-GH GPS cable,PASS
+GPS1,9,BUZZER-,0~5V,Buzzer negative drive,10P JST-GH GPS cable,PASS
+GPS1,10,GND,GND,GPS/compass ground,10P JST-GH GPS cable,PASS
+IO PWM OUT,S1,IO_CH1,+3.3V signal,ESC1 PWM in,Servo rail harness,PASS
+IO PWM OUT,S2,IO_CH2,+3.3V signal,ESC2 PWM in,Servo rail harness,PASS
+IO PWM OUT,S3,IO_CH3,+3.3V signal,ESC3 PWM in,Servo rail harness,PASS
+IO PWM OUT,S4,IO_CH4,+3.3V signal,ESC4 PWM in,Servo rail harness,PASS
+IO PWM OUT,+,VDD_SERVO,5V-16V,ESC/BEC rail positive,Servo rail harness,PASS
+IO PWM OUT,-,GND,GND,ESC/BEC rail ground,Servo rail harness,PASS
+N/A,N/A,Jetson USB3.0 host,5V/SS pair,Depth camera USB3 input,USB3 locking cable,PASS
+N/A,N/A,Jetson CSI/USB camera,3.3V/5V by module,RGB camera input,CSI ribbon or USB cable,PASS
+N/A,N/A,Jetson USB/UART,3.3V logic or USB,Radar data link,USB/UART harness,PASS
+N/A,N/A,Jetson M.2/USB LTE,3.3V/5V by modem,LTE modem data link,M.2 card or USB modem cable,PASS

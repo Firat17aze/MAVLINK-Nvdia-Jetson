@@ -1,0 +1,8 @@
+DETECTIONS = "/uav/perception/detections"
+FUSED_OBSTACLES = "/uav/fusion/obstacles"
+TRACKED_TARGET = "/uav/tracking/target"
+COMMAND_INTENT = "/uav/mission/intent"
+SAFETY_DECISION = "/uav/safety/decision"
+COMMAND_OUTPUT = "/uav/mavlink/offboard_setpoint"
+HEALTH = "/uav/system/health"
+FAILSAFE_EVENT = "/uav/system/failsafe_event"

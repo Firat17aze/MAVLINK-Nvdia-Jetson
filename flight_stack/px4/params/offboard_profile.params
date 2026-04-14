@@ -1,0 +1,16 @@
+# PX4 profile template for MAVLink companion autonomy
+# Review names/ranges against the exact PX4 release before applying.
+
+MAV_1_CONFIG=102
+MAV_1_MODE=2
+MAV_1_RATE=80000
+SER_TEL2_BAUD=921600
+COM_RC_IN_MODE=1
+COM_OBL_ACT=1
+COM_OBL_RC_ACT=0
+COM_OF_LOSS_T=1.0
+NAV_RCL_ACT=2
+GF_ACTION=1
+GF_MAX_HOR_DIST=300
+GF_MAX_VER_DIST=120
+MIS_TAKEOFF_ALT=10
