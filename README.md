@@ -1,4 +1,4 @@
-# Industry-Grade UAV Edge AI (MAVLink + PX4 + Jetson)
+
 
 This repository is a production-style UAV autonomy scaffold that separates flight-critical and AI decision layers:
 
